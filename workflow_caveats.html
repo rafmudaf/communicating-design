@@ -56,6 +56,13 @@
     <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HV5G6PRBEK"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-HV5G6PRBEK');
+            </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -389,7 +396,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="caveats">
 <h1>Caveats<a class="headerlink" href="#caveats" title="Permalink to this heading">#</a></h1>
-<p>You don’t always need to diagram…</p>
+<p><strong>Know what you need to communicate and to whom.</strong>
+While it can be useful to develop a graphic representation of a software system as a form
+of ideation or meditation, developing these visualizations takes time and effort.
+Furthermore, stale documentation can be worse than no documentation at all, so these visual
+elements will require maintenance along with the code itself.
+Consider first writing the gist of a diagram in words, and then decide if the visualization
+will add more than the text alone.</p>
+<p><strong>Impression is more important than accuracy.</strong>
+A diagram need not be a perfect representation of the software system in order to be useful.
+Often, analogies or abstractions of the actual software are helpful in describing ideas
+and building a mental model for the reader.
+For example, caller-callee diagrams are often very accurate, but it can be difficult to
+discern a high level understanding of the system.
+It can be more effective to strip away details until the main structural elements of
+a particular idea remain.</p>
 </section>
 
     <script type="text/x-thebe-config">
