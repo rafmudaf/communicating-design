@@ -13,6 +13,7 @@ parts:
     chapters:
     - file: diagram_types_usage
     - file: diagram_uml
+    - file: diagram_software
     - file: diagram_mermaid
 
   - caption: Workflows
