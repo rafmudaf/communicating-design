@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to my Jupyter Book &#8212; Communicating Software Design</title>
+    <title>Communicating elements of software architecture and design &#8212; Communicating Software Design</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Intro to architecture" href="architecture.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,14 +155,25 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to my Jupyter Book
+                    Communicating elements of software architecture and design
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Architecture and Design</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Intro to architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture_examples.html">Examples of famous software</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Diagrams</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="diagram_types_usage.html">Types and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram_uml.html">UML: Unified Markup Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram_mermaid.html">Mermaid text-based generator</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflows</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Diagramming as development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_caveats.html">Caveats</a></li>
 </ul>
 
     </div>
@@ -361,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to my Jupyter Book</h1>
+    <h1>Communicating elements of software architecture and design</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,18 +386,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-my-jupyter-book">
-<h1>Welcome to my Jupyter Book<a class="headerlink" href="#welcome-to-my-jupyter-book" title="Permalink to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="communicating-elements-of-software-architecture-and-design">
+<h1>Communicating elements of software architecture and design<a class="headerlink" href="#communicating-elements-of-software-architecture-and-design" title="Permalink to this heading">#</a></h1>
+<p>This notebook is a collection of notes and ideas on how to communicate elements of
+software architecture and design.
+It is a work in progress and will be updated throughout 2023.</p>
+<p>In general, software architecture involves the relationship between components of the software
+system.
+While the structure of the relationship can be inferred through reading the
+code itself, the architecture of complex software is often difficult to comprehend accurately
+and in a reasonable amount of time.
+To empower further development of a software, it is critical to document and communicate
+the design intent and architectural elements for both current developers in the future
+and new developers joining the project.</p>
+<p>This notebook details specific types of diagrams used in the context of communicating software
+architecture and design.
+Additionally, tools to produce the diagrams are presented along with additional training resources.
+Finally, methods for effectively communicating these ideas as part of the project workflow are
+proposed.</p>
+<p>This is intended to be a community resource, so please engage!
+Create a Discussion in the repository to talk about a particular concept,
+or open an Issue to let me know where I’ve missed something.
+Pull requests are welcome, and I will engage with them as quickly as possible.
+Lastly, feel free to contact me directly at <a class="reference external" href="mailto:rafael&#46;mudafort&#37;&#52;&#48;nrel&#46;gov">rafael<span>&#46;</span>mudafort<span>&#64;</span>nrel<span>&#46;</span>gov</a>.</p>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Architecture and Design</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Intro to architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture_examples.html">Examples of famous software</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Diagrams</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="diagram_types_usage.html">Types and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram_uml.html">UML: Unified Markup Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram_mermaid.html">Mermaid text-based generator</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflows</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">Diagramming as development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_caveats.html">Caveats</a></li>
 </ul>
 </div>
 </section>
@@ -422,11 +464,11 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="markdown.html"
+       href="architecture.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Intro to architecture</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
