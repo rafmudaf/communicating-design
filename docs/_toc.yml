@@ -15,3 +15,7 @@ parts:
     - file: diagram_uml
     - file: diagram_mermaid
 
+  - caption: Workflows
+    chapters:
+    - file: workflow
+    - file: workflow_caveats
