@@ -20,10 +20,15 @@ Finally, methods for effectively communicating these ideas as part of the projec
 proposed.
 
 This is intended to be a community resource, so please engage!
-Create a Discussion in the repository to talk about a particular concept,
-or open an Issue to let me know where I've missed something.
-Pull requests are welcome, and I will engage with them as quickly as possible.
+Create a [Discussion](https://github.com/rafmudaf/communicating-design/discussions) in the
+repository to talk about a particular concept, or open an
+[Issue](https://github.com/rafmudaf/communicating-design/issues) to let me know where I've
+missed something. [Pull requests](https://github.com/rafmudaf/communicating-design/pulls)
+are welcome, and I will engage with them as quickly as possible.
 Lastly, feel free to contact me directly at rafael.mudafort@nrel.gov.
 
 ```{tableofcontents}
 ```
+
+This material will be included as a BSSw Blog Post and an IDEAS HPC Best Practices Seminar soon.
+The blog post, slides, and seminar recordings will be linked here when they are published.
