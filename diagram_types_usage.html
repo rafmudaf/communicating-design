@@ -175,6 +175,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Diagrams</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Types and usage</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="diagram_uml.html">UML: Unified Markup Language</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diagram_software.html">Software generators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diagram_mermaid.html">Mermaid text-based generator</a></li>
@@ -370,7 +372,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -386,6 +390,29 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and usage</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-diagrams-and-how-to-make-them">What are diagrams and how to make them</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-diagrams">Types of diagrams</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-diagrams">Applications of diagrams</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-of-software-design">Elements of software design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parti-and-design-abstractions">Parti and design abstractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizational-hierarchies">Organizational hierarchies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-cost">Computational cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-processes">Infrastructure processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-flows">User flows</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -397,9 +424,84 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="types-and-usage">
 <h1>Types and usage<a class="headerlink" href="#types-and-usage" title="Permalink to this heading">#</a></h1>
+<p>Choosing the right type of diagram to communicate an idea first requires identifying
+and thoroughly understanding the idea itself.
+It is often difficult to communicate all of a software architecture in a single diagram,
+so an effective practice is to separate the concepts into well scoped areas and then
+choose the best method of communication.
+The diagrams described here are not mutually exclusive, and a combination of any of
+these should be employed in the overall description of a software.</p>
+<section id="what-are-diagrams-and-how-to-make-them">
+<h2>What are diagrams and how to make them<a class="headerlink" href="#what-are-diagrams-and-how-to-make-them" title="Permalink to this heading">#</a></h2>
+<p>Reference the Architecture Diagrams book to describe what a diagram is in the abstract.
+Describe the goals of visual representation - why would we want to capture something concrete like computer code as something abstract like a set of boxes connected in various ways?</p>
+<p>Refer to the mermaid and software sections.
+Present an overview on the existing tools to create diagrams:</p>
+<ul class="simple">
+<li><p>Automatically through things like dot, graphviz; these are typically caller/callee graphs</p></li>
+<li><p>Programmatically with tools like mermaid</p></li>
+<li><p>Manually with yEd, <a class="reference external" href="http://draw.io">draw.io</a>, Mural, Miro, etc</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="types-of-diagrams">
+<h1>Types of diagrams<a class="headerlink" href="#types-of-diagrams" title="Permalink to this heading">#</a></h1>
 <p>Here, I’ll list types of diagrams that are commonly used in software architecture and design.
 I’ll also include suggestions on what types of ideas each can be used to communicate.
 This is the primary document in the whole site.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="applications-of-diagrams">
+<h1>Applications of diagrams<a class="headerlink" href="#applications-of-diagrams" title="Permalink to this heading">#</a></h1>
+<section id="elements-of-software-design">
+<h2>Elements of software design<a class="headerlink" href="#elements-of-software-design" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>High-level design principles and overarching themes (parti)</p></li>
+<li><p>Architecture at various levels of fidelity: top-level (library), mid (integration, function to function), low (within a function)</p></li>
+<li><p>Data structures and flow</p></li>
+<li><p>Kernel or compute code</p></li>
+<li><p>Algorithms; may span various levels of fidelity</p></li>
+<li><p>Developer and user workflows; i/o file structures</p></li>
+<li><p>Scope of new work within existing projects</p></li>
+</ul>
+</section>
+<section id="parti-and-design-abstractions">
+<h2>Parti and design abstractions<a class="headerlink" href="#parti-and-design-abstractions" title="Permalink to this heading">#</a></h2>
+<p>These diagrams are not fixed. It can be anything that enables communicating the idea that you want to communication.
+Be creative!</p>
+</section>
+<section id="organizational-hierarchies">
+<h2>Organizational hierarchies<a class="headerlink" href="#organizational-hierarchies" title="Permalink to this heading">#</a></h2>
+<p>High-level object diagrams for OOP</p>
+<ul class="simple">
+<li><p>Class diagrams
+Function flow for Functional Programming
+Module-module interactions</p></li>
+<li><p>Component diagrams
+Library-library interactions</p></li>
+</ul>
+</section>
+<section id="algorithms">
+<h2>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this heading">#</a></h2>
+<p>Logical steps in words or pseudo code</p>
+</section>
+<section id="computational-cost">
+<h2>Computational cost<a class="headerlink" href="#computational-cost" title="Permalink to this heading">#</a></h2>
+<p>Memory access diagrams
+CPU/ GPU usage</p>
+</section>
+<section id="infrastructure-processes">
+<h2>Infrastructure processes<a class="headerlink" href="#infrastructure-processes" title="Permalink to this heading">#</a></h2>
+<p>Thing like automated testing, release pipelines, and collaborative workflows</p>
+<ul class="simple">
+<li><p>Sequence diagrams</p></li>
+<li><p>Deployment diagrams including symbols from AWS and GCP</p></li>
+</ul>
+</section>
+<section id="user-flows">
+<h2>User flows<a class="headerlink" href="#user-flows" title="Permalink to this heading">#</a></h2>
+<p>Pipelines for pre and post processing data
+Where your software fits into a larger context for a particular topic</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -456,6 +558,35 @@ This is the primary document in the whole site.</p>
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and usage</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-diagrams-and-how-to-make-them">What are diagrams and how to make them</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-diagrams">Types of diagrams</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-diagrams">Applications of diagrams</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-of-software-design">Elements of software design</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parti-and-design-abstractions">Parti and design abstractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizational-hierarchies">Organizational hierarchies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithms">Algorithms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-cost">Computational cost</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#infrastructure-processes">Infrastructure processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-flows">User flows</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
