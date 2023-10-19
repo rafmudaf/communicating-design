@@ -9,3 +9,9 @@ parts:
     - file: architecture
     - file: architecture_examples
 
+  - caption: Diagrams
+    chapters:
+    - file: diagram_types_usage
+    - file: diagram_uml
+    - file: diagram_mermaid
+
