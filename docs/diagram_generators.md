@@ -22,6 +22,7 @@ tech stack.
 Briefly describe the file types, which are convertible, and make a broad recommendation
 on which to adopt and which to avoid.
 
+(mermaid)=
 # Mermaid text-based generator
 
 Possibly broaden to include other text-based diagram generators.

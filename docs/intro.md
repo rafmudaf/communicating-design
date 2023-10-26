@@ -1,6 +1,6 @@
 # Communicating elements of software architecture and design
 
-This notebook is a collection of notes and ideas on how to communicate elements of
+This notebook is a collection of notes and ideas on communicating elements of
 software architecture and design.
 It is a work in progress and will be updated throughout 2023.
 
