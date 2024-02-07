@@ -1,3 +1,7 @@
+
+(generators)=
+# Generators
+
 # Software generators
 
 There are lots of software tools to create diagrams of any type and use case.
@@ -17,3 +21,22 @@ tech stack.
 ## Filetypes
 Briefly describe the file types, which are convertible, and make a broad recommendation
 on which to adopt and which to avoid.
+
+(mermaid)=
+# Mermaid text-based generator
+
+Possibly broaden to include other text-based diagram generators.
+
+Describe mermaid and what it enables in the context of software documentation:
+- Rendered in GitHub elements such as comments on any thread (Issues, PR, etc)
+- Rendered in GitHub Pages
+- Rendered in Jupyter Notebooks
+- Very easy to extend and build large diagrams quickly
+- Can be used in any text editor
+- Customizable styling (limited, but functional)
+
+Cons:
+- No control over placement of elements
+- Limited functionality for less common diagram types
+
+

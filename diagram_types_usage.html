@@ -1,15 +1,14 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Types and usage &#8212; Communicating Software Design</title>
+    <title>Types and applications &#8212; Communicating Software Design</title>
   
   
   
@@ -19,43 +18,41 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-HV5G6PRBEK"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -63,12 +60,18 @@
                 gtag('js', new Date());
                 gtag('config', 'G-HV5G6PRBEK');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-HV5G6PRBEK');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'diagram_types_usage';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -83,10 +86,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -127,11 +129,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -146,6 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="intro.html">
@@ -154,10 +160,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Communicating Software Design</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -174,17 +192,22 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Diagrams</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Types and usage</a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Types and applications</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="diagram_uml.html">UML: Unified Markup Language</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagram_software.html">Software generators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="diagram_mermaid.html">Mermaid text-based generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="diagram_generators.html">Generators</a></li>
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Workflows</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="workflow.html">Diagramming as development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="workflow_caveats.html">Caveats</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="uml_distilled_notes.html">UML Distilled, Distilled</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 
     </div>
@@ -355,6 +378,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -364,6 +388,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -385,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Types and usage</h1>
+    <h1>Types and applications</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,11 +420,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and usage</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-diagrams-and-how-to-make-them">What are diagrams and how to make them</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and applications</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-diagrams">Relational Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entity-relationship-diagram">Entity-Relationship Diagram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-diagram">Class Diagram</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-diagrams">Types of diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-charts">Flow Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-flow-diagram">Data Flow Diagram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-diagram">Activity Diagram</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-diagram">State Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-diagrams">Sequence Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-diagrams">Deployment Diagrams</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-diagrams">Applications of diagrams</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-of-software-design">Elements of software design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parti-and-design-abstractions">Parti and design abstractions</a></li>
@@ -420,40 +456,200 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="types-and-usage">
-<h1>Types and usage<a class="headerlink" href="#types-and-usage" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="types-and-applications">
+<h1>Types and applications<a class="headerlink" href="#types-and-applications" title="Link to this heading">#</a></h1>
 <p>Choosing the right type of diagram to communicate an idea first requires identifying
 and thoroughly understanding the idea itself.
-It is often difficult to communicate all of a software architecture in a single diagram,
-so an effective practice is to separate the concepts into well scoped areas and then
-choose the best method of communication.
-The diagrams described here are not mutually exclusive, and a combination of any of
-these should be employed in the overall description of a software.</p>
-<section id="what-are-diagrams-and-how-to-make-them">
-<h2>What are diagrams and how to make them<a class="headerlink" href="#what-are-diagrams-and-how-to-make-them" title="Permalink to this heading">#</a></h2>
-<p>Reference the Architecture Diagrams book to describe what a diagram is in the abstract.
-Describe the goals of visual representation - why would we want to capture something concrete like computer code as something abstract like a set of boxes connected in various ways?</p>
-<p>Refer to the mermaid and software sections.
-Present an overview on the existing tools to create diagrams:</p>
+It is often difficult to communicate the entirety of a software architecture in a single
+diagram, so an effective practice is to separate the concepts into well scoped areas and
+choose appropriate methods to communicate each concept.
+The diagrams described here are not mutually exclusive, and a combination of these should
+be employed in the overall description of a software.</p>
+<p>The list of diagrams relevant to software design is extensive, and the practicality
+of each type varies with the situation and communication intent.
+This list is a subset of common, approachable, and practical diagram types.
+All of these are supported by at least one of the diagramming tools described in
+<a class="reference internal" href="diagram_generators.html#generators"><span class="std std-ref">Generators</span></a>.</p>
+<section id="relational-diagrams">
+<h2>Relational Diagrams<a class="headerlink" href="#relational-diagrams" title="Link to this heading">#</a></h2>
+<p>These are the most common and often most practical types of diagrams used in software design.
+They allow designers to communicate how various components of a software system interact with
+each other at varying levels of fidelity.
+In general, blocks representing entities are connected to other blocks with lines that can
+contain additional metadata.</p>
+<section id="entity-relationship-diagram">
+<span id="id1"></span><h3>Entity-Relationship Diagram<a class="headerlink" href="#entity-relationship-diagram" title="Link to this heading">#</a></h3>
+<p>An entity–relationship diagram (ERD, entity-relationship model, or ERM) describes
+interrelated things of interest within a domain.
+This type of model captures limited low-level details of a system but can describe
+extensively the interaction of low-level components.
+ERD’s are traditionally used to communicate the architecture of relational databases,
+but they are also useful to describe the architecture of object oriented software
+and are closely related to the <a class="reference internal" href="#class-diagram"><span class="std std-ref">Class Diagram</span></a>.
+and object oriented software systems.
+For reference, a simple ERD is shown below.</p>
+<figure class="align-default" id="id3">
+<div class="mermaid">
+            erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string registrationNumber
+        string make
+        string model
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string firstName
+        string lastName
+        int age
+    }
+        </div><figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A basic entity-relationship diagram.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Each entity is depicted as a rectangular box, must have a name, and can optionally be
+given attributes.
+Entities are typically nouns, and they should correspond to elements of the system
+that store data.</p>
+<figure class="align-default" id="id4">
+<div class="mermaid">
+            erDiagram
+    PERSON
+    &quot;PERSON with attributes&quot; {
+        string firstName
+        string lastName
+    }
+        </div><figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">An entity-relationship diagram with attributes.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Relationships between entities are typically verbs that connect or operate on entities.
+The relationships also contain cardinality information.
+A one-to-one relationship means that each entity is tied directly to one other entity.
+A one-to-many relationship means that each entity is tied to one or more other entities.
+Many-to-many relationships mean that a group of entities are tied to a group of other
+entities.
+There are a few conventions for indicating relationships in ERDs, and one popular notation
+is the crow’s foot notation.
+When using the <a class="reference internal" href="diagram_generators.html#mermaid"><span class="std std-ref">Mermaid text-based generator</span></a>, the text-based symbols map to the meaning as given in the
+following table. The rendered symbols are also shown in the diagram below.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symbol (Left)</p></th>
+<th class="head"><p>Symbol (Right)</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">|o</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">o|</span></code></p></td>
+<td><p>Zero or one</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">||</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">||</span></code></p></td>
+<td><p>Exactly one</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">}o</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">o{}</span></code></p></td>
+<td><p>Zero or many</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">}|</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">|{</span></code></p></td>
+<td><p>One or many</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-default" id="id5">
+<div class="mermaid">
+            erDiagram
+    ZeroOrMany }o--|o ZeroOrOne : &quot;&quot;
+    ZeroOrOne o|--|| ExactlyOne : &quot;&quot;
+    ExactlyOne ||--|{ OneOrMany : &quot;&quot;
+        </div><figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">An entity-relationship diagram with cardinality.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>References</strong>:</p>
 <ul class="simple">
-<li><p>Automatically through things like dot, graphviz; these are typically caller/callee graphs</p></li>
-<li><p>Programmatically with tools like mermaid</p></li>
-<li><p>Manually with yEd, <a class="reference external" href="http://draw.io">draw.io</a>, Mural, Miro, etc</p></li>
+<li><p><a class="reference external" href="https://dl.acm.org/doi/10.1145/320434.320440">Original publication</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Wikipedia</a></p></li>
+<li><p><a class="reference external" href="https://mermaid.js.org/syntax/entityRelationshipDiagram.html">Mermaid</a></p></li>
+<li><p><a class="reference external" href="https://miro.com/diagramming/er-diagram-many-to-many-relationship/">Miro</a></p></li>
 </ul>
 </section>
+<section id="class-diagram">
+<span id="id2"></span><h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Link to this heading">#</a></h3>
+<p>Class diagrams are used to express the relationship of various organizational components
+in a software system.
+They are primarily used in the context of object oriented programming (OOP) to communicate
+both the internal structure of classes and their relationship to other classes,
+and they are related to the <a class="reference internal" href="#entity-relationship-diagram"><span class="std std-ref">Entity-Relationship Diagram</span></a>.
+The Unified Modeling Language (UML) notation system is very closely tied to class diagrams,
+and UML provides a powerful ontology for creating them.</p>
+<p>Class diagrams contain the following information:</p>
+<ul class="simple">
+<li><p>Class blueprints including encapsulated data and associated methods</p></li>
+<li><p>Association between classes</p></li>
+<li><p>Inheritance</p></li>
+<li><p>Aggregation</p></li>
+<li><p>Composition</p></li>
+<li><p>Dependency</p></li>
+<li><p>Cardinality or multiplicity
+See <a class="reference external" href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/</a></p></li>
+</ul>
+<!-- 2. **Association:** An association is a relationship between two or more classes, indicating that objects of one class are somehow related to objects of another class. Associations are often represented as lines connecting the participating classes, and they can have multiplicity (indicating how many objects are involved) and roles (describing the nature of the relationship).
+3. **Inheritance/Generalization:** Inheritance is a relationship where one class (the subclass or derived class) inherits attributes and behaviors from another class (the superclass or base class). In a class diagram, inheritance is shown as a solid line with a triangle arrowhead pointing from the subclass to the superclass.
+4. **Dependency:** A dependency relationship indicates that one class relies on another class. It is represented by a dashed line with an arrow pointing from the dependent class to the class it depends on. Dependencies can exist between classes due to method parameters, return types, or other interactions.
+5. **Association Class:** In some cases, an association between classes may have additional attributes or methods. An association class is a class that is associated with the association itself, and it represents these additional properties or behaviors.
+6. **Aggregation:** Aggregation is a specialized form of association that represents a whole-part relationship. It indicates that one class is composed of other classes or objects. It is often represented as a diamond shape on the side of the whole or aggregate class.
+7. **Composition:** Composition is a stronger form of aggregation, signifying that the parts of a whole are tightly bound to it and cannot exist independently. It is represented with a filled diamond shape on the side of the whole class.
+8. **Multiplicity:** Multiplicity is used to specify how many instances of one class are associated with instances of another class. It is often expressed as a range, such as "1..*" (one or more), "0..1" (zero or one), or specific values like "5." -->
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="types-of-diagrams">
-<h1>Types of diagrams<a class="headerlink" href="#types-of-diagrams" title="Permalink to this heading">#</a></h1>
-<p>Here, I’ll list types of diagrams that are commonly used in software architecture and design.
-I’ll also include suggestions on what types of ideas each can be used to communicate.
-This is the primary document in the whole site.</p>
+</section>
+<section id="flow-charts">
+<h2>Flow Charts<a class="headerlink" href="#flow-charts" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://dev.to/angelotheman/flowchart-wizardry-master-the-art-of-visualizing-algorithms-4e4j">https://dev.to/angelotheman/flowchart-wizardry-master-the-art-of-visualizing-algorithms-4e4j</a></p>
+<section id="data-flow-diagram">
+<h3>Data Flow Diagram<a class="headerlink" href="#data-flow-diagram" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Data-flow_diagram">https://en.wikipedia.org/wiki/Data-flow_diagram</a></p>
+</section>
+<section id="activity-diagram">
+<h3>Activity Diagram<a class="headerlink" href="#activity-diagram" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Activity_diagram">https://en.wikipedia.org/wiki/Activity_diagram</a>
+Activity diagrams are graphical representations of workflows of stepwise activities and
+actions with support for choice, iteration and concurrency.
+In the Unified Modeling Language, activity diagrams are intended to model both computational
+and organizational processes (i.e., workflows), as well as the data flows intersecting with
+the related activities.
+Although activity diagrams primarily show the overall flow of control, they can also include
+elements showing the flow of data between activities through one or more data stores.</p>
+<p><a class="reference external" href="https://drawio-app.com/create-uml-activity-diagrams-in-draw-io/">https://drawio-app.com/create-uml-activity-diagrams-in-draw-io/</a></p>
+</section>
+</section>
+<section id="state-diagram">
+<h2>State Diagram<a class="headerlink" href="#state-diagram" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://drawio-app.com/blog/uml-state-diagrams-with-draw-io/">https://drawio-app.com/blog/uml-state-diagrams-with-draw-io/</a></p>
+</section>
+<section id="sequence-diagrams">
+<h2>Sequence Diagrams<a class="headerlink" href="#sequence-diagrams" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://mermaid.js.org/syntax/sequenceDiagram.html">https://mermaid.js.org/syntax/sequenceDiagram.html</a>
+<a class="reference external" href="https://drawio-app.com/create-uml-sequence-diagrams-in-draw-io/">https://drawio-app.com/create-uml-sequence-diagrams-in-draw-io/</a></p>
+</section>
+<section id="deployment-diagrams">
+<h2>Deployment Diagrams<a class="headerlink" href="#deployment-diagrams" title="Link to this heading">#</a></h2>
+<p>Describe the infrastructure used to distribute and deploy a software.
+AWS and GCP have their own symbols, and UML has a generic symbol set.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Deployment_diagram">https://en.wikipedia.org/wiki/Deployment_diagram</a>
+<a class="reference external" href="https://www.lucidchart.com/pages/uml-deployment-diagram">https://www.lucidchart.com/pages/uml-deployment-diagram</a>
+<a class="reference external" href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-deployment-diagram/">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-deployment-diagram/</a></p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="applications-of-diagrams">
-<h1>Applications of diagrams<a class="headerlink" href="#applications-of-diagrams" title="Permalink to this heading">#</a></h1>
+<h1>Applications of diagrams<a class="headerlink" href="#applications-of-diagrams" title="Link to this heading">#</a></h1>
 <section id="elements-of-software-design">
-<h2>Elements of software design<a class="headerlink" href="#elements-of-software-design" title="Permalink to this heading">#</a></h2>
+<h2>Elements of software design<a class="headerlink" href="#elements-of-software-design" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>High-level design principles and overarching themes (parti)</p></li>
 <li><p>Architecture at various levels of fidelity: top-level (library), mid (integration, function to function), low (within a function)</p></li>
@@ -465,12 +661,12 @@ This is the primary document in the whole site.</p>
 </ul>
 </section>
 <section id="parti-and-design-abstractions">
-<h2>Parti and design abstractions<a class="headerlink" href="#parti-and-design-abstractions" title="Permalink to this heading">#</a></h2>
+<h2>Parti and design abstractions<a class="headerlink" href="#parti-and-design-abstractions" title="Link to this heading">#</a></h2>
 <p>These diagrams are not fixed. It can be anything that enables communicating the idea that you want to communication.
 Be creative!</p>
 </section>
 <section id="organizational-hierarchies">
-<h2>Organizational hierarchies<a class="headerlink" href="#organizational-hierarchies" title="Permalink to this heading">#</a></h2>
+<h2>Organizational hierarchies<a class="headerlink" href="#organizational-hierarchies" title="Link to this heading">#</a></h2>
 <p>High-level object diagrams for OOP</p>
 <ul class="simple">
 <li><p>Class diagrams
@@ -481,16 +677,16 @@ Library-library interactions</p></li>
 </ul>
 </section>
 <section id="algorithms">
-<h2>Algorithms<a class="headerlink" href="#algorithms" title="Permalink to this heading">#</a></h2>
+<h2>Algorithms<a class="headerlink" href="#algorithms" title="Link to this heading">#</a></h2>
 <p>Logical steps in words or pseudo code</p>
 </section>
 <section id="computational-cost">
-<h2>Computational cost<a class="headerlink" href="#computational-cost" title="Permalink to this heading">#</a></h2>
+<h2>Computational cost<a class="headerlink" href="#computational-cost" title="Link to this heading">#</a></h2>
 <p>Memory access diagrams
 CPU/ GPU usage</p>
 </section>
 <section id="infrastructure-processes">
-<h2>Infrastructure processes<a class="headerlink" href="#infrastructure-processes" title="Permalink to this heading">#</a></h2>
+<h2>Infrastructure processes<a class="headerlink" href="#infrastructure-processes" title="Link to this heading">#</a></h2>
 <p>Thing like automated testing, release pipelines, and collaborative workflows</p>
 <ul class="simple">
 <li><p>Sequence diagrams</p></li>
@@ -498,7 +694,7 @@ CPU/ GPU usage</p>
 </ul>
 </section>
 <section id="user-flows">
-<h2>User flows<a class="headerlink" href="#user-flows" title="Permalink to this heading">#</a></h2>
+<h2>User flows<a class="headerlink" href="#user-flows" title="Link to this heading">#</a></h2>
 <p>Pipelines for pre and post processing data
 Where your software fits into a larger context for a particular topic</p>
 </section>
@@ -532,7 +728,7 @@ Where your software fits into a larger context for a particular topic</p>
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="architecture_examples.html"
@@ -561,17 +757,29 @@ Where your software fits into a larger context for a particular topic</p>
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and usage</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-diagrams-and-how-to-make-them">What are diagrams and how to make them</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Types and applications</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relational-diagrams">Relational Diagrams</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entity-relationship-diagram">Entity-Relationship Diagram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-diagram">Class Diagram</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-diagrams">Types of diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-charts">Flow Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-flow-diagram">Data Flow Diagram</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-diagram">Activity Diagram</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-diagram">State Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-diagrams">Sequence Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deployment-diagrams">Deployment Diagrams</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-diagrams">Applications of diagrams</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-of-software-design">Elements of software design</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parti-and-design-abstractions">Parti and design abstractions</a></li>
@@ -604,6 +812,7 @@ By Rafael Mudafort
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2023.
@@ -630,8 +839,8 @@ By Rafael Mudafort
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
