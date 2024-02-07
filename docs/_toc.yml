@@ -19,3 +19,8 @@ parts:
     chapters:
     - file: workflow
     - file: workflow_caveats
+
+  - caption: Reference
+    chapters:
+    - file: uml_distilled_notes
+    - file: zreferences
