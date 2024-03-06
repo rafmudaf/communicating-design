@@ -70,6 +70,8 @@
                 gtag('config', 'G-HV5G6PRBEK');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -396,7 +398,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -412,6 +416,30 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Communicating elements of software architecture and design</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bssw-blog-post-2023-bssw-fellowship-visually-communicating-elements-of-software-design">BSSw Blog Post - 2023 BSSw Fellowship: Visually communicating elements of software design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uml-class-diagrams-and-sequence-diagrams">UML, Class Diagrams, and Sequence Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspective">Perspective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-driven-development">Documentation Driven Development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-to-make-it-easy">Tools to make it easy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid">mermaid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doxygen-graphviz-with-dot">Doxygen / graphviz with dot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyreverse">Pyreverse</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-summary">In summary</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -425,7 +453,7 @@ document.write(`
 <h1>Communicating elements of software architecture and design<a class="headerlink" href="#communicating-elements-of-software-architecture-and-design" title="Link to this heading">#</a></h1>
 <p>This notebook is a collection of notes and ideas on communicating elements of
 software architecture and design.
-It is a work in progress and will be updated throughout 2023.</p>
+It is a work in progress and will be updated throughout 2023 and 2024.</p>
 <p>Software architecture is the result of deliberately designing the relationship between
 components of a software system.
 While a general structure of the relationships can be inferred through reading the
@@ -448,6 +476,8 @@ repository to talk about a particular concept, or open an
 missed something. <a class="reference external" href="https://github.com/rafmudaf/communicating-design/pulls">Pull requests</a>
 are welcome, and I will engage with them as quickly as possible.
 Lastly, feel free to contact me directly at <a class="reference external" href="mailto:rafael&#46;mudafort&#37;&#52;&#48;nrel&#46;gov">rafael<span>&#46;</span>mudafort<span>&#64;</span>nrel<span>&#46;</span>gov</a>.</p>
+<p>This material will be included as a BSSw Blog Post and an IDEAS HPC Best Practices Seminar soon.
+The blog post, slides, and seminar recordings will be linked here when they are published.</p>
 <div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Architecture and Design</span></p>
 <ul>
@@ -480,8 +510,379 @@ Lastly, feel free to contact me directly at <a class="reference external" href="
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
 </ul>
 </div>
-<p>This material will be included as a BSSw Blog Post and an IDEAS HPC Best Practices Seminar soon.
-The blog post, slides, and seminar recordings will be linked here when they are published.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="bssw-blog-post-2023-bssw-fellowship-visually-communicating-elements-of-software-design">
+<h1>BSSw Blog Post - 2023 BSSw Fellowship: Visually communicating elements of software design<a class="headerlink" href="#bssw-blog-post-2023-bssw-fellowship-visually-communicating-elements-of-software-design" title="Link to this heading">#</a></h1>
+<p>I’ve been a researcher at the National Renewable Energy Laboratory for seven years, and my role squarely fits into the description of a <a class="reference external" href="https://society-rse.org/about/">research software engineer (RSE)</a>.
+In my time at the lab, I’ve noticed a pattern in funding and staffing cycles where both can be discontinuous or unpredictable resulting in lost momentum and institutional knowledge on software projects.
+While this pattern is likely inherent to research itself, RSE’s can mitigate these impacts and improve the overall quality of their software by <strong>communicating elements of software design within the development workflow.</strong>
+As a <a class="reference external" href="https://bssw.io/fellows/rafael-mudafort">2023 Better Scientific Software Fellow</a>, I’ve aggregated resources and developed training material to empower RSE’s to visually communicate ideas and themes within their software projects, and the results are described here.</p>
+<p>Documenting ideas, decisions, and institutional knowledge is a powerful way to mitigate discontinuous momentum during software development efforts.
+Early in the development of a software, requirements are identified, and some of them are adopted while others are intentionally rejected.
+The form and function of the software starts to take shape.
+Capturing these decisions is beneficial to future development efforts considering that the collective knowledge that the development team has in the moment will be different from it’s knowledge at a future time.
+Given time constraints for software development in the research environment, the process of communicating design decisions can be easily relegated to that elusive “when there’s time” moment.
+To manage this tendency, I suggest that project teams adopt graphical communication methods to describe conceptual ideas and their implementations using Unified Modeling Language (UML) diagrams and automated tooling.
+Narrative content around these diagrams is helpful and encouraged, but the diagrams often speak for themselves.
+Once the initial diagrams are in place, future development efforts can build on them to scope and design work while inherently communicating the impact to the entire system.
+This article describes UML, and it’s role in the development workflow for research software engineers.</p>
+<section id="uml-class-diagrams-and-sequence-diagrams">
+<h2>UML, Class Diagrams, and Sequence Diagrams<a class="headerlink" href="#uml-class-diagrams-and-sequence-diagrams" title="Link to this heading">#</a></h2>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">Unified Modeling Language (UML)</a> was created in the 1995 and adopted by the Object Management Group, a standards consortium, in 1997.
+In essence, UML is a set of graphical notations described by metamodels that enable describing and designing software systems.
+UML is particularly relevant to software developed in the object-oriented paradigm, but the methods and notations are broadly relevant to software engineering and systems engineering (see <a class="reference external" href="https://sysml.org">SysML</a>).
+The notations defined in UML can be considered syntax for creating a specific set of diagrams useful in software design and analysis.
+While UML defines 14 types of diagrams, the following eight are particularly useful and the first two are described further:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Class_diagram">Class diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Sequence_diagram">Sequence diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Package_diagram">Package diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Deployment_diagram">Deployment diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Use_case_diagram">Use case diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/State_diagram">State diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Activity_diagram">Activity diagram</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">Interaction overview diagram</a></p></li>
+</ul>
+<p>Class diagrams are directly correlated to object-oriented programming.
+Attributes and methods on a class can be described with their visibility, argument types, and return type.
+Abstract classes and abstract methods are denoted in italics.
+Inheritance, aggregation, composition, and association are described with lines connecting classes and specific types of arrows.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Class</div>
+<div class="mermaid">
+            classDiagram
+    class Class {
+        Type attribute1
+        Type attribute2
+        + public_method(arg1, arg2)
+        # protected_method() return_type
+        - private_method()
+    }
+        </div></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Abstract class</div>
+<div class="mermaid">
+            classDiagram
+    class AbstractClass {
+        &lt;&lt;Abstract&gt;&gt;
+        Type static_attribute$
+        abstract_method()* return_type
+    }
+        </div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Inheritance</div>
+<div class="mermaid">
+            classDiagram
+    BaseClass1 &lt;|-- DerivedFrom1and2
+    BaseClass2 &lt;|-- DerivedFrom1and2
+    BaseClass2 &lt;|-- DerivedFrom1
+        </div></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Aggregation and Composition</div>
+<div class="mermaid">
+            classDiagram
+    Container o-- AggregationPart
+    Container *-- CompositionPart
+        </div></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Association</div>
+<div class="mermaid">
+            classDiagram
+    A -- B
+    A --&gt; B
+        </div></div>
+</div>
+</div>
+</div>
+</div>
+<p>Sequence diagrams are broadly applicable to systems when describing algorithms, processes, and procedures.
+The metamodel relates participants by passing messages (commands) and data between them.
+A rectangle on a participant’s line indicated whether a portion is “on” or “off”, and boxes encompassing events denote if-statements, loops, and parallel processes.</p>
+<div class="mermaid">
+            sequenceDiagram
+    participant ParticipantA
+    participant ParticipantB
+
+    ParticipantA-&gt;&gt;+ParticipantB: get_data()
+    ParticipantB--&gt;&gt;-ParticipantA: data
+    create participant ParticipantC
+    ParticipantA-&gt;&gt;+ParticipantC: set_data(data)
+    ParticipantC-&gt;&gt;ParticipantC: sanitize_data(data)
+    ParticipantC-&gt;&gt;ParticipantC: save_data(data)
+    ParticipantC--&gt;&gt;-ParticipantA: void
+    alt if this
+        ParticipantA-&gt;&gt;ParticipantB: b_command()
+    else else this
+        ParticipantA-&gt;&gt;ParticipantC: c_command()
+    end
+    loop For all data points
+        ParticipantA--&gt;&gt;ParticipantB: operation(data)
+        ParticipantB--&gt;&gt;ParticipantC: operation(data)
+        ParticipantC--&gt;&gt;ParticipantA: operation(data)
+    end
+        </div></section>
+<section id="perspective">
+<h2>Perspective<a class="headerlink" href="#perspective" title="Link to this heading">#</a></h2>
+<p>The UML metamodels provide the syntax to describe a software system with varying levels of fidelity, and it can be tempting to include as much detail as possible.
+However, for any relatively complex software, this can be too much information to digest and understand patterns.
+I suggest to instead focus on the audience and the specific message to communicate by considering the following questions:</p>
+<ul class="simple">
+<li><p>Who is the intended audience, and what is their level of experience with your software?</p></li>
+<li><p>In a few sentences, what specifically are you communicating?</p></li>
+<li><p>At what level of fidelity does the content of the message exist in the software?</p></li>
+</ul>
+<p>Identifying and understand the audience is a critical step to any form of communication.
+When developing diagrams about a software, I suggest to also spend time identifying the exact message that needs to be communicated.
+After the message and target audience are identified, the diagrams can be tailored effectively deliver the message.</p>
+<p>For example, the class diagram metamodel provides the syntax to describe a software architecture at levels of fidelity ranging from intra-class to system-level all at once.
+However, for any relatively complex software, this can be too much information to digest and understand patterns.</p>
+<p>In addition to aspects within a software, these diagrams are useful for describing procedures around a software, such as git-flow and code reviews.</p>
+<p>Instead, consider</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Conceptual</div>
+<div class="mermaid">
+            classDiagram
+
+    class Floris
+    class Farm
+
+    class FlowField {
+        u: NDArrayFloat
+        v: NDArrayFloat
+        w: NDArrayFloat
+    }
+
+    class Grid {
+        &lt;&lt;abstract&gt;&gt;
+        x: NDArrayFloat
+        y: NDArrayFloat
+        z: NDArrayFloat
+    }
+    style Grid stroke:#f66,stroke-width:2px,color:#fff
+
+    class WakeModelManager {
+        &lt;&lt;interface&gt;&gt;
+        combination_model: BaseModel
+        deflection_model: BaseModel
+        velocity_model: BaseModel
+        turbulence_model: BaseModel
+    }
+    style WakeModelManager stroke:#f66,stroke-width:2px,color:#fff
+
+    class BaseModel {
+        &lt;&lt;abstract&gt;&gt;
+        dict parameters
+        prepare_function()
+        function()
+    }
+
+    class Solver {
+        &lt;&lt;interface&gt;&gt;
+        parameters: dict
+    }
+    style Solver stroke:#f66,stroke-width:2px,color:#fff
+
+    Floris *-- Farm
+    Floris *-- FlowField
+    Floris *-- Grid
+    Floris *-- WakeModelManager
+    Floris --&gt; Solver
+    WakeModelManager -- BaseModel
+
+    Solver --&gt; Farm
+    Solver --&gt; FlowField
+    Solver --&gt; Grid
+    Solver --&gt; WakeModelManager
+        </div></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Specification</div>
+<div class="mermaid">
+            classDiagram
+
+  class WakeModelManager {
+    combination_function
+    deflection_function
+    turbulence_function
+    velocity_function
+    validate_model_strings(instance: attrs.Attribute, value: dict) None
+  }
+  &lt;&lt;interface&gt;&gt; WakeModelManager
+  class GaussVelocityDeficit {
+    prepare_function(grid: Grid, flow_field: FlowField) Dict[str, Any]
+    function(x_i: np.ndarray,\ny_i: np.ndarray,\nz_i: np.ndarray,\naxial_induction_i: np.ndarray,\ndeflection_field_i: np.ndarray,\nyaw_angle_i: np.ndarray,\nturbulence_intensity_i: np.ndarray,\nct_i: np.ndarray,\nhub_height_i: float,\nrotor_diameter_i: np.ndarray) None
+  }
+  class GaussVelocityDeflection {
+    prepare_function(grid: Grid, flow_field: FlowField) dict[str, Any]
+    function(x_i: np.ndarray,\ny_i: np.ndarray,\nyaw_i: np.ndarray,\nturbulence_intensity_i: np.ndarray,\nct_i: np.ndarray,\nrotor_diameter_i: float)
+  }
+  WakeModelManager -- GaussVelocityDeficit
+  WakeModelManager -- GaussVelocityDeflection
+        </div></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Implementation</div>
+<div class="mermaid">
+            classDiagram
+  class BaseClass {
+    logger
+  }
+  class Grid {
+    cubature_weights
+    grid_resolution : int | Iterable
+    n_turbines : int
+    n_wind_directions : int
+    n_wind_speeds : int
+    time_series : bool
+    turbine_coordinates
+    turbine_diameters
+    wind_directions
+    wind_speeds
+    x_sorted
+    x_sorted_inertial_frame
+    y_sorted
+    y_sorted_inertial_frame
+    z_sorted
+    z_sorted_inertial_frame
+    check_coordinates(instance: attrs.Attribute, value: np.ndarray) None
+    grid_resolution_validator(instance: attrs.Attribute, value: int | Iterable) None
+    set_grid()* None
+    wind_directions_validator(instance: attrs.Attribute, value: NDArrayFloat) None
+    wind_speeds_validator(instance: attrs.Attribute, value: NDArrayFloat) None
+  }
+  &lt;&lt;abstract&gt;&gt; Grid
+  class TurbineGrid {
+    average_method : str
+    sorted_coord_indices
+    sorted_indices
+    unsorted_indices
+    x_center_of_rotation
+    y_center_of_rotation
+    set_grid() None
+  }
+  class FromDictMixin {
+    as_dict() dict
+    from_dict(data: dict)
+  }
+
+  FromDictMixin &lt;|-- BaseClass
+  BaseClass &lt;|-- Grid
+  Grid &lt;|-- TurbineGrid
+        </div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Show the sequential and full flow solver chart to communicate that this helps to plan new work -->
+</section>
+<section id="documentation-driven-development">
+<h2>Documentation Driven Development<a class="headerlink" href="#documentation-driven-development" title="Link to this heading">#</a></h2>
+<p>The practice of “test driven development”, identifying the criteria of correctness for a particular procedure and writing the tests prior to the implementation, is well understood within the research software communities, and entire ecosystems of software tooling exist to support it.
+“Documentation driven development” is less popular, but equally (at least) important for research software, especially given the often discontinuous resources mentioned earlier.
+The general idea in documentation driven development is to communicate to a chosen audience about the details of a particular software development effort.
+The communication should involve at least the following aspects:</p>
+<ul class="simple">
+<li><p>Design and scope of the work</p></li>
+<li><p>Relationship to existing elements of the software including existing implementations and overarching themes</p></li>
+<li><p>New themes and design decisions included and excluded</p></li>
+<li><p>Updates to the existing documentation relevant to the work</p></li>
+</ul>
+<p>As in test driven development, the “driven” part of documentation driven development is critical.
+Ideally, these documents are written before any code, though, in practice, writing it alongside the implementation is acceptable.
+A suggested flow using GitHub products is as follows:</p>
+<ol class="arabic simple">
+<li><p>Describe the scope and design of a software development effort in a GitHub Discussion, and collaborate with colleagues to understand impacts beyond the specific target code</p></li>
+<li><p>After arriving at an acceptable design, create a GitHub Issue that summarizes the Discussion and details the required testing procedures to verify the new code or change</p></li>
+<li><p>Make the code change along with relevant documentation including API docs, usage, function docstrings, and any other relevant material to describe what has been done and how to use it</p></li>
+<li><p>Create a GitHub Pull Request that resolves the open Issue and satisfies the Discussion</p></li>
+</ol>
+</section>
+<section id="tools-to-make-it-easy">
+<h2>Tools to make it easy<a class="headerlink" href="#tools-to-make-it-easy" title="Link to this heading">#</a></h2>
+<p>Inaccurate documentation can be worse than no documentation, and manual methods can be inaccurate or missing altogether.
+For testing, this conundrum has been solved with continuous integration systems, and I suggest integrating documentation as part of the same workflow.</p>
+<section id="mermaid">
+<h3>mermaid<a class="headerlink" href="#mermaid" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://mermaid.js.org">Mermaid.js</a> is a JavaScript library for describing diagrams in text and rendering them in web browsers.
+Mermaid contains syntax for the eight UML diagrams listed above, as well as additional diagrams not included in UML.
+It is well integrated into much of the software development infrastructure including:</p>
+<ul class="simple">
+<li><p>GitHub / GitLab</p></li>
+<li><p>VS Code</p></li>
+<li><p>Atlassian products</p></li>
+<li><p>Slack</p></li>
+<li><p><a class="reference external" href="https://mermaid.js.org/ecosystem/integrations-community.html">Many more</a></p></li>
+</ul>
+</section>
+<section id="doxygen-graphviz-with-dot">
+<h3>Doxygen / graphviz with dot<a class="headerlink" href="#doxygen-graphviz-with-dot" title="Link to this heading">#</a></h3>
+<p>For C, C++, and Fortran (to some degree) projects, Doxygen is a static code analyzer to create API documentation as well as the following diagrams:</p>
+<ul class="simple">
+<li><p>Class hierarchies</p></li>
+<li><p>Include-dependency graphs</p></li>
+<li><p>Caller/callee diagrams</p></li>
+<li><p>Directory graph (similar to package diagram)</p></li>
+</ul>
+<p>It exports all products into a HTML viewer that can be included as part of any online documentation.
+Doxygen itself generates the HTML files and API docs, and it integrates with Graphviz and dot to create the graphs and embeds images into the HTML.</p>
+</section>
+<section id="pyreverse">
+<h3>Pyreverse<a class="headerlink" href="#pyreverse" title="Link to this heading">#</a></h3>
+<p>For Python projects, pyreverse, part of pylint, is a Python library that analyzes class definitions to create class and package diagrams.
+It can output results in PlantUML (.puml), Mermaid (.mmd), HTML, and various image formats, as well as any format supported by Graphviz.</p>
+</section>
+</section>
+<section id="in-summary">
+<h2>In summary<a class="headerlink" href="#in-summary" title="Link to this heading">#</a></h2>
+<p>Through the BSSw Fellowship, I’ve had the opportunity to interact with the community to gather ideas on documentation and communication on software design.
+In particular, I presented at the NLIT S3C conference in April 2024 (<a class="reference internal" href="#"><span class="xref myst">slides</span></a>) and held an IDEAS/ECP HPC Best Practices Webinar in April 2024 (<a class="reference internal" href="#"><span class="xref myst">video</span></a>).
+I’ve also put together an <a class="reference internal" href="#"><span class="xref myst">online dashboard</span></a> to collect notes, ideas, and examples of good software diagrams that I find.</p>
+<p>I see visual communicate as one step toward a pattern language for software design.
+We already have plenty of design patterns and syntactic conventions, but we don’t currently have an effective language to talk about our systems at a high level and relate them to each other.
+I hope to build on this work to continue seeking the pattern language that will unlock true understanding of the systems we create so that we can use it both to create new, more elegant software systems and bring meaningful recognition to the research software engineers who create them.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -530,7 +931,36 @@ The blog post, slides, and seminar recordings will be linked here when they are 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Communicating elements of software architecture and design</a><ul class="visible nav section-nav flex-column">
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#bssw-blog-post-2023-bssw-fellowship-visually-communicating-elements-of-software-design">BSSw Blog Post - 2023 BSSw Fellowship: Visually communicating elements of software design</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uml-class-diagrams-and-sequence-diagrams">UML, Class Diagrams, and Sequence Diagrams</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perspective">Perspective</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-driven-development">Documentation Driven Development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-to-make-it-easy">Tools to make it easy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mermaid">mermaid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#doxygen-graphviz-with-dot">Doxygen / graphviz with dot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyreverse">Pyreverse</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-summary">In summary</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
