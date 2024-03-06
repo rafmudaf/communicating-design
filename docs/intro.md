@@ -2,7 +2,7 @@
 
 This notebook is a collection of notes and ideas on communicating elements of
 software architecture and design.
-It is a work in progress and will be updated throughout 2023.
+It is a work in progress and will be updated throughout 2023 and 2024.
 
 Software architecture is the result of deliberately designing the relationship between
 components of a software system.
@@ -29,8 +29,8 @@ missed something. [Pull requests](https://github.com/rafmudaf/communicating-desi
 are welcome, and I will engage with them as quickly as possible.
 Lastly, feel free to contact me directly at rafael.mudafort@nrel.gov.
 
-```{tableofcontents}
-```
-
 This material will be included as a BSSw Blog Post and an IDEAS HPC Best Practices Seminar soon.
 The blog post, slides, and seminar recordings will be linked here when they are published.
+
+```{tableofcontents}
+```

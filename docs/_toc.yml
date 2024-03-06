@@ -22,5 +22,6 @@ parts:
 
   - caption: Reference
     chapters:
+    - file: bssw_blog_post
     - file: uml_distilled_notes
     - file: zreferences
